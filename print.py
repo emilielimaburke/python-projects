@@ -1,0 +1,5 @@
+print("Trust in the Lord with all your heart")
+print("and lean not on your own understanding;")
+print("in all your ways submit to him,")
+print("and he will make your paths straight.")
+print("Proverbs 3:5-6")
