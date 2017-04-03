@@ -14,8 +14,10 @@ csvfile = open('scraper_data.csv', 'a')
 writer = csv.writer(csvfile)
 
 for item in items:
-	name = item.find('h2').text
-	currency = item.find('sup', 'sx-price-currency').text
-	whole = item.find('span', 'sx-price-whole').text
-	fractional = item.find('sup', 'sx-price-fractional').text
-	writer.writerow([name, currency, whole, fractional])
+	try:
+		name = item.find('h2').text
+		whole = item.find('span', 'sx-price-whole').text
+		fractional = item.find('sup', 'sx-price-fractional').text
+		writer.writerow([name, whole, fractional])
+	except:
+		pass
