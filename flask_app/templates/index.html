@@ -5,13 +5,14 @@
   <body>
     <div class="jumbotron">
       <div class="container">
-        {% if name %}
-            <h1>Hello {{ name }}!</h1>
+        {% if forecast %}
+            <h1>{{ forecast }}!</h1>
+            <a href="{{ url_for('index') }}">Look up another address</a> <br>
         {% else %}
-            <h1>Hello. What's your name?</h1>
+            <h1>Hello. Where do you live?</h1>
             <form action="/" class="form-inline">
                 <div class="form-group">
-                  <input type="text" name="name" placeholder="Enter your name here" class="form-control">
+                  <input type="text" name="address" placeholder="Enter your address here" class="form-control">
                 </div>
                   <input type="submit" value="Submit" class="btn btn-primary">
             </form>
