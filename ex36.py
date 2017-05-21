@@ -1,3 +1,4 @@
+# http://emilieburke.com/understanding-debt-snowflakes/
 def debt_snowflakes(name, min_pay, balance):
 	payments = (balance/min_pay) + 2
 	print("You have %d payments left if you just pay the minimum." % payments)
